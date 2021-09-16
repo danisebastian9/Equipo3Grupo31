@@ -1,7 +1,7 @@
 @charset "ISO-8859-1";
 
 body {
-	background: linear-gradient(to right, #dae2f8, #d6a4a4); 
+	background: linear-gradient(to right, #f2994ac9, #f2c94cc9);
 }
 
 form {
@@ -29,7 +29,7 @@ form {
     padding: 30px;
     border-radius: 15px;
     box-shadow: 1px 1px 4px #2b2a2a;
-    background: #a5a2b3;
+    background: #F8E4A5;
 
 }
 
@@ -51,7 +51,7 @@ form {
     padding: 12px;
     margin-top: 20px;
     width: 100%;
-    background-color: #d6a4a4;
+    background-color: #4cd8f2b8;
     border-radius: 9px;
     border: none;
     box-shadow: 3px 3px 8px #2b2a2a;
@@ -63,10 +63,10 @@ form {
 
 .buttons:hover {
     cursor: pointer;
-    background-color: #dbe2f8;
+    background-color: #4CD8F2;
     box-shadow: 3px 5px 3px #2b2a2a;
-    color: #464646;
-    text-shadow: 1px 2px 4px #a95858;
+    color: white;
+    text-shadow: 2px 2px 3px #000000;
 }
 
 #cancel {
@@ -75,7 +75,7 @@ form {
 
 #cancel:hover {
     cursor: pointer;
-    background-color: #a95858;
+    background-color: #864CF2;
     color: #dbe2f8;
-    text-shadow: 1px 2px 4px #220a0a;
+    text-shadow: 2px 2px 2px #080808;
 }
