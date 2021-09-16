@@ -25,3 +25,6 @@
 5. Luego volver al repositorio y enviar un pull request con un mensaje de los cambios realizados. 
 6. El "Pull Request" sera analizado y luego de aprobarse se hara el debido "merge" para incluirlo en el paquete principal
 
+
+Exitos en el proyecto :D 
+
