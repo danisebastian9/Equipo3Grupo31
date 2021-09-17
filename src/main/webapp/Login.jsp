@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
 </head>
 <body>
-    <form action="Login" method="POST">
+    <form action="Validacion" method="POST">
         <div id="fields">
             <div ><label class="labels" for="">User</label><input class="inputs" type="text" name="usuario"></div>
             <div ><label class="labels" for="">Password</label><input class="inputs" type="password" name="password"></div>

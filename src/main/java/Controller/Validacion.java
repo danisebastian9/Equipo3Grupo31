@@ -9,21 +9,24 @@ import javax.servlet.http.HttpServletResponse;
 import javax.swing.JOptionPane;
 
 /**
- * Servlet implementation class Login
+ * Servlet implementation class Validacion
  */
-@WebServlet("/Login")
-public class Login extends HttpServlet {
+@WebServlet("/Validacion")
+public class Validacion extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Login() {
+    public Validacion() {
         super();
         // TODO Auto-generated constructor stub
     }
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String Usuario, Password;
 		
 		if(request.getParameter("enviar") != null) {
