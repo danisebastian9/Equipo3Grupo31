@@ -7,6 +7,7 @@
 <title>Home</title>
 <link rel="stylesheet" href="Index.css">
 <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/77c4e13a1c.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="page-wrapper">
@@ -29,7 +30,7 @@
             <div class="container"></div>
             <section id="section1">
                 <h1>COLOMBIAN HANDMADE CRAFTS</h1>
-                <img id="craftImg" src="/src/main/webapp/Static/Canasto-guacamaya.png" alt="Colombian Handmade craft">
+                <img id="craftImg" src="Canasto-guacamaya.png" alt="Colombian Handmade craft">
                 <form id="form" action="#">
                     <input id="email" name="email" type="email" placeholder="Enter your email address" required><br>
                     <input class="btn" id="submit" type="submit" value="GET STARTED">
@@ -68,12 +69,12 @@
                 </section>
             </div>
             <section id="video">
-                <iframe width="560" height="315" src="https://www.youtube.com/watch?v=4YW18cRYrKc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            	<iframe width="560" height="315" src="https://www.youtube.com/embed/4YW18cRYrKc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </section>
             <section id="pricing">
                 <div class="product" id="mimbreLapm">
                     <div class="productTitle">Mimbre Lamp</div>
-                    <img class="productImage" src="/src/main/webapp/Static/Mimbre_lamp.jpg" alt="Mimbre lamp">
+                    <img class="productImage" src="Mimbre_lamp.jpg" alt="Mimbre lamp">
                     <h2>$500</h2>
                     <ol>
                         <li>Perfect for home and Business</li>
@@ -84,7 +85,7 @@
                 </div>
                 <div class="product" id="wayuuPurse">
                     <div class="productTitle">Wayuu Purse</div>
-                    <img class="productImage" src="/src/main/webapp/Static/Wayuu_purse.jfif" alt="Wayuu Purse">
+                    <img class="productImage" src="Wayuu_purse.jfif" alt="Wayuu Purse">
                     <h2>$450</h2>
                     <ol>
                         <li>Unique design for unique person</li>
@@ -95,7 +96,7 @@
                 </div>
                 <div class="product" id="flowerVase">
                     <div class="productTitle">Mimbre Flower Vase</div>
-                    <img class="productImage" src="/src/main/webapp/Static/mimbre-Flower_vase.png" alt="Exterior car coating image">
+                    <img class="productImage" src="mimbre-Flower_vase.png" alt="Exterior car coating image">
                     <h2>$400</h2>
                     <ol>
                         <li>Flowers are beatiful, they deserve the best clothes</li>
