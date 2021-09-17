@@ -1,7 +1,11 @@
 @charset "ISO-8859-1";
 
+* {
+	font-family: 'Varela Round', sans-serif;
+}
+
 body {
-	background: linear-gradient(to right, #f2994ac9, #f2c94cc9);
+	background: linear-gradient(to right, #f2984a, #f2c84c);
 }
 
 form {
@@ -13,7 +17,6 @@ form {
     flex-direction: column;
     margin: auto;
     border-radius: 15px;
-    font-family: 'Varela Round', sans-serif;
     font-weight: bold;
 }
 
@@ -70,7 +73,7 @@ form {
 }
 
 #cancel {
-    background-color: #585555;
+    background-color: #864cf2ad;
 }
 
 #cancel:hover {
@@ -79,3 +82,4 @@ form {
     color: #dbe2f8;
     text-shadow: 2px 2px 2px #080808;
 }
+
