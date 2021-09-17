@@ -71,41 +71,38 @@
                 <iframe width="560" height="315" src="https://www.youtube.com/watch?v=4YW18cRYrKc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </section>
             <section id="pricing">
-                <div class="product" id="exterior">
-                    <div class="productTitle">EXTERIOR COATING</div>
-                    <img class="productImage" src="Exterior.jpg" alt="Exterior car coating image">
-                    <h2>$700</h2>
+                <div class="product" id="mimbreLapm">
+                    <div class="productTitle">Mimbre Lamp</div>
+                    <img class="productImage" src="/src/main/webapp/Static/Mimbre_lamp.jpg" alt="Mimbre lamp">
+                    <h2>$500</h2>
                     <ol>
-                        <li>General 3 Year coating.</li>
-                        <li>Windows.</li>
-                        <li>Rims.</li>
-                        <li>Complete exterior detailing with black parts.</li><br>
+                        <li>Perfect for home and Business</li>
+                        <li>Mimbre material</li>
+                        <li>Warm led light included</li>
                     </ol>
-                    <button class="btn">Schedule</button>
+                    <button class="btn">Mine</button>
                 </div>
-                <div class="product" id="interiorEngine">
-                    <div class="productTitle">FULL 3 YEAR DETAILING</div>
-                    <img class="productImage" src="Interior2.jpg" alt="Exterior car coating image">
-                    <h2>$850</h2>
+                <div class="product" id="wayuuPurse">
+                    <div class="productTitle">Wayuu Purse</div>
+                    <img class="productImage" src="/src/main/webapp/Static/Wayuu_purse.jfif" alt="Wayuu Purse">
+                    <h2>$450</h2>
                     <ol>
-                        <li>Complete Vehicle 3 Year coating.</li>
-                        <li>Full Exterior Coating. </li>
-                        <li>Interior detailing with coating protection.</li>
-                        <li>Engine like new and protected.</li><br>
+                        <li>Unique design for unique person</li>
+                        <li>Black and white color</li>
+                        <li>From native Wayuu culture </li>
                     </ol>
-                    <button class="btn">Schedule</button>
+                    <button class="btn">Mine</button>
                 </div>
-                <div class="product" id="exterior">
-                    <div class="productTitle">FULL 5 YEAR DETAILING</div>
-                    <img class="productImage" src="engine.jpg" alt="Exterior car coating image">
-                    <h2>$1.100</h2>
+                <div class="product" id="flowerVase">
+                    <div class="productTitle">Mimbre Flower Vase</div>
+                    <img class="productImage" src="/src/main/webapp/Static/mimbre-Flower_vase.png" alt="Exterior car coating image">
+                    <h2>$400</h2>
                     <ol>
-                        <li>Multiple protection layers applied to the entire Vehicle.</li>
-                        <li>Exterior included.</li>
-                        <li>Engine and Interior included.</li>
-                        <li>1 Maintenience product application included</li>
+                        <li>Flowers are beatiful, they deserve the best clothes</li>
+                        <li>Multi color desigh</li>
+                        <li>Perfect for any environment</li>
                     </ol>
-                    <button class="btn">Schedule</button>
+                    <button class="btn">Mine</button>
                 </div>
             </section>
             <footer>
@@ -114,7 +111,7 @@
                     <li><a href="#">Privacy</a></li>
                     <li><a href="#">Terms</a></li>
                 </ul>
-                <span>Copyright 2021, Daniel Cubides Car detailing</span>
+                <span>Copyright 2021</span>
             </footer>
         </div>
     </div>
