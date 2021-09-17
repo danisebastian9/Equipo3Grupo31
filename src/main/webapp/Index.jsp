@@ -30,10 +30,10 @@
             <div class="container"></div>
             <section id="section1">
                 <h1>COLOMBIAN HANDMADE CRAFTS</h1>
-                <img id="craftImg" src="Canasto-guacamaya.png" alt="Colombian Handmade craft">
+                <img class="craft" src="Canasto-guacamaya.png" alt="Colombian Handmade craft">
                 <form id="form" action="#">
                     <input id="email" name="email" type="email" placeholder="Enter your email address" required><br>
-                    <input class="btn" id="submit" type="submit" value="GET STARTED">
+                    <input class="btn" id="submit" type="submit" value="SUBSCRIBE">
                 </form>
             </section>
             <div class="container">

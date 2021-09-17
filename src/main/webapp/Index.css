@@ -18,7 +18,8 @@ body {
 
 #nav-bar {
     height: 10vh;
-    background: linear-gradient(to right, #f2994a, #f2c94c);;
+    background: linear-gradient(to right, #f2994a, #f2c94c);
+    box-shadow: 0px 1px 10px black;
 }
 
 .nav-Links {
@@ -51,7 +52,8 @@ body {
 }
 
 .nav-Links li a:hover {
-    color: #f2994ac9;
+  color: #f2994ac9;
+  text-shadow: 2px 2px 2px black;
 }
 
 .nav-Links li a {
@@ -152,12 +154,13 @@ body {
 }
 
 #section1 h1 {
-    font-style: italic;
-    text-shadow: 2px 2px 3px darkorange;
+  color: #000000b8;
+  font-style: italic;
+  text-shadow: 1px 1px 6px #f2a24a;
 }
 
-#craftImg {
-    max-width: 300px;
+.craft {
+    max-width: 400px;
     border-radius: 18px;
     margin-top: 20px;
     opacity: 0.8;
@@ -172,23 +175,27 @@ body {
     margin: 20px 10px ;
     border-radius: 10px;
     border: solid 1px hsl(0, 0%, 70%);
+    box-shadow: 2px 2px 5px black;
 }
 
 #submit {
-    width: 40%;
-    background-color: darkorange;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
-    transform: skewX(-14deg);
+  background: linear-gradient(to left, #f2994a, #f2c94c);
+  width: 40%;
+  color: #eee;
+  text-shadow: 1px 1px 1px black;
+  box-shadow: 2px 2px 6px black;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transform: skewX(-5deg);
 }
 
 #submit:hover {
-    background-color: rgb(255, 72, 0);
+  background: linear-gradient(to right, #f2994a, #f2c94c);
+  box-shadow: 2px 2px 3px black;
 }
 
 #features {
@@ -201,7 +208,7 @@ body {
     justify-content: center;
     height: 125px;
     width: 20vw;
-    color: darkorange;
+    color: #f2994a;
 }
 
 @media (max-width: 550px) {
@@ -306,19 +313,21 @@ body {
 }
 
 .product > button {
-    background-color: darkorange;
-    color: white;
+    background-color: #f2994a;
+    color: #eee;
+    text-shadow: 1px 1px 1px black;
+    box-shadow: 2px 2px 6px black;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-weight: bold;
-    transform: skewX(-14deg);
+    transform: skewX(-5deg);
 }
 
 .product > button:hover {
-  background-color: orange;
+  background-color: #f2c94c;
   transition: background-color 1s;
 }
 
