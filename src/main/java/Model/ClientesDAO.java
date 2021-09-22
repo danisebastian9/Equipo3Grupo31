@@ -22,11 +22,11 @@ public class ClientesDAO {
 		try {
 			String sql="INSERT INTO clientes VALUES(?,?,?,?,?)";
 			ps = con.prepareStatement(sql);
-			ps.setInt(1, cliente.getCedula());
-			ps.setString(2, cliente.getDireccion());
-			ps.setString(3, cliente.getEmail());
-			ps.setString(4, cliente.getNombre());
-			ps.setString(5, cliente.getTelefono());
+			ps.setInt(1, cliente.getCedula_cliente());
+			ps.setString(2, cliente.getDireccion_cliente());
+			ps.setString(3, cliente.getEmail_cliente());
+			ps.setString(4, cliente.getNombre_cliente());
+			ps.setString(5, cliente.getTelefono_cliente());
 		}catch(SQLException ex) {
 			JOptionPane.showMessageDialog(null, "Error al insertar: " +ex);
 		}

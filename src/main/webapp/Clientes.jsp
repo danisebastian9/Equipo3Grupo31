@@ -23,7 +23,7 @@
             <section class="main-section" id="welcome">
                 <header>Manejo Clientes</header>
 
-                <form action="Clientes" method="POST">
+                <form action="Clientes" method="post">
                     <div><label for="">Cedula Cliente: </label><input type="number" name="cedula" value="<%=codigo%>" required <%=estado%>></div>
                     <div><input type="hidden" name="cod" value="<%=codigo%>" required></div>
                     <div><label for="">Direccion Cliente: </label><input type="text" name="direccion" value="<%=titulo%>"></div>
