@@ -14,12 +14,12 @@ int codigo=0;
 %>
 <%
 if(request.getParameter("codigo")!=null){
-codigo=Integer.parseInt(request.getParameter("codigo"));
-direccion= request.getParameter("direccion");
-email=request.getParameter("editorial");
-nombre=request.getParameter("autor");
-telefono=request.getParameter("paginas");
-estado="disabled";
+codigo = Integer.parseInt(request.getParameter("codigo"));
+direccion = request.getParameter("direccion");
+email = request.getParameter("email");
+nombre = request.getParameter("nombre");
+telefono = request.getParameter("telefono");
+estado = "disabled";
 }
 %>
 <%
@@ -63,7 +63,7 @@ out.print("<script>alert('"+mensaje+"');</script>");//Mensaje con alert js
                 <form action="Clientes" method="post">
                     <fieldset>
                         <legend>Consultar</legend>
-                        <div><label>Cedula Cliente:</label><input type="text" name="codigo" required></div>
+                        <div><label>Cedula Cliente:</label><input type="number" name="codigo" required></div>
                         <div><input type="submit" name="consultar" value="Consultar"></div>
                     </fieldset>
                 </form>

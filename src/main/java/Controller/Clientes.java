@@ -16,7 +16,6 @@ public class Clientes extends HttpServlet {
        
     public Clientes() {
         super();
-
     }
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -39,6 +38,26 @@ public class Clientes extends HttpServlet {
 				response.sendRedirect("Clientes.jsp?men=Cliente no pudo ser registrado");
 			}
 		}
+		
+		
+		if(request.getParameter("consultar") != null) {
+			String direccion, email, nombre, telefono;
+			int codigo;
+			
+			codigo = Integer.parseInt(request.getParameter("codigo"));
+			ClientesDTO cliDto = cliDao.Buscar_Cliente(codigo);
+			if(cliDto != null) {
+				codigo = cliDto.getCedula();
+				direccion = cliDto.getDireccion();
+				email = cliDto.getEmail();
+				nombre = cliDto.getNombre();
+				telefono = cliDto.getTelefono();
+				response.sendRedirect("Clientes.jsp?codigo="+codigo+"&&direccion="+direccion+"&&email="+email+"&&nombre="+nombre+"&&telefono="+telefono);
+			} else {
+				response.sendRedirect("Clientes.jsp?men=El libro no existe");
+			}
+		}
+		
 		
 		
 		
