@@ -8,6 +8,32 @@
 <link rel="stylesheet" href="AdminMenu.css">
 </head>
 <body>
+<%!String mensaje="";
+String direccion="",email="",nombre="",telefono="",estado="";
+int codigo=0;
+%>
+<%
+if(request.getParameter("codigo")!=null){
+codigo=Integer.parseInt(request.getParameter("codigo"));
+direccion= request.getParameter("direccion");
+email=request.getParameter("editorial");
+nombre=request.getParameter("autor");
+telefono=request.getParameter("paginas");
+estado="disabled";
+}
+%>
+<%
+if(request.getParameter("men")!=null){
+codigo=0;
+direccion="";
+email="";
+nombre="";
+telefono="";
+estado="";
+mensaje=request.getParameter("men");
+out.print("<script>alert('"+mensaje+"');</script>");//Mensaje con alert js
+}
+%>
     <div>
         <nav id="navbar">
             <header>CRAFTY</header>
@@ -26,10 +52,10 @@
                 <form action="Clientes" method="post">
                     <div><label for="">Cedula Cliente: </label><input type="number" name="cedula" value="<%=codigo%>" required <%=estado%>></div>
                     <div><input type="hidden" name="cod" value="<%=codigo%>" required></div>
-                    <div><label for="">Direccion Cliente: </label><input type="text" name="direccion" value="<%=titulo%>"></div>
-                    <div><label for="">Email Cliente: </label><input type="email" name="email" value="<%=editorial%>"></div>
-                    <div><label for="">Nombre Cliente: </label><input type="text" name="nombre" value="<%=autor%>"></div>
-                    <div><label for="">Telefono Cliente: </label><input type="text" name="telefono" value="<%=paginas%>"></div>
+                    <div><label for="">Direccion Cliente: </label><input type="text" name="direccion" value="<%=direccion%>"></div>
+                    <div><label for="">Email Cliente: </label><input type="email" name="email" value="<%=email%>"></div>
+                    <div><label for="">Nombre Cliente: </label><input type="text" name="nombre" value="<%=nombre%>"></div>
+                    <div><label for="">Telefono Cliente: </label><input type="text" name="telefono" value="<%=telefono%>"></div>
                     <div><input type="submit" name="registrar" value="Registrar"></div>
                     <div><input type="submit" name="actualizar" value="Actualizar"></div>
                     <div><input type="submit" name="eliminar" value="Eliminar"></div>

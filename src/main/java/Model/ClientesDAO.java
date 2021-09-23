@@ -28,7 +28,7 @@ public class ClientesDAO {
 			ps.setString(4, cliente.getNombre_cliente());
 			ps.setString(5, cliente.getTelefono_cliente());
 		}catch(SQLException ex) {
-			JOptionPane.showMessageDialog(null, "Error al insertar: " +ex);
+			JOptionPane.showMessageDialog(null, "Error al Agregar: " + ex);
 		}
 		return result;
 	}
