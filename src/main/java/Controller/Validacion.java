@@ -8,9 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.swing.JOptionPane;
 
-/**
- * Servlet implementation class Validacion
- */
+
 @WebServlet("/Validacion")
 public class Validacion extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -20,7 +18,6 @@ public class Validacion extends HttpServlet {
      */
     public Validacion() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
 	/**
