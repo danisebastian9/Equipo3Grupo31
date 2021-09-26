@@ -26,7 +26,6 @@
                 </ul>
             </nav>
         </header>
-        <h1>prueba</h1>
         <div class="content">
             <div class="container"></div>
             <section id="section1">
