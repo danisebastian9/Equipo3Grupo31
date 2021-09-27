@@ -53,4 +53,17 @@ public class ClientesDAO {
 		return cliente;
 	}
 	
+	public boolean Eliminar_Cliente(int Cedula) {
+		boolean result = false;
+		try {
+			String sql = "DELETE FROM clientes WHERE cedula_cliente = ?";
+			ps = con.prepareStatement(sql);
+			ps.setInt(1, Cedula);
+			result = ps.executeUpdate()>0;
+		} catch(SQLException e){
+			JOptionPane.showMessageDialog(null, "Error al eliminar Clente"+ e);
+		}
+		return result;
+	}
+	
 }
