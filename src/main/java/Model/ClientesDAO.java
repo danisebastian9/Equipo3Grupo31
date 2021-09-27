@@ -71,9 +71,16 @@ public class ClientesDAO {
 		try {
 			String sql = "UPDATE clientes SET direccion_cliente=?, email_cliente=?, nombre_cliente=?, telefono_cliente=? WHERE cedula_cliente = ?";
 			ps = con.prepareStatement(sql);
+			ps.setString(1, Cliente.getDireccion());
+			ps.setString(2, Cliente.getEmail());
+			ps.setString(3, Cliente.getNombre());
+			ps.setString(4, Cliente.getTelefono());
+			ps.setInt(5, Cliente.getCedula());
+			result = ps.executeUpdate()>0;
 		} catch(SQLException e){
-			
+			JOptionPane.showMessageDialog(null, "Error al actualizar" + e);
 		}
+		return result;
 	}
 	
 }
