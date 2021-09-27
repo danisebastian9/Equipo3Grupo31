@@ -66,4 +66,14 @@ public class ClientesDAO {
 		return result;
 	}
 	
+	public boolean Actualizar_Clientes(ClientesDTO Cliente) {
+		boolean result = false;
+		try {
+			String sql = "UPDATE clientes SET direccion_cliente=?, email_cliente=?, nombre_cliente=?, telefono_cliente=? WHERE cedula_cliente = ?";
+			ps = con.prepareStatement(sql);
+		} catch(SQLException e){
+			
+		}
+	}
+	
 }
