@@ -1,5 +1,4 @@
-<!-- <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,41 +7,96 @@
 <link rel="stylesheet" href="AdminMenu.css">
 </head>
 <body>
-    <div>
-        <nav id="navbar">
-            <header>CRAFTY</header>
-            <div>
-                <a class="nav-link" href="AdminMenu.jsp">Admin Menu</a>
-                <a class="nav-link" href="Usuarios.jsp">Usuarios</a>
-                <a class="nav-link" href="Clientes.jsp">Clientes</a>
-                <a class="nav-link" href="Productos.jsp">Productos</a>
-                <a class="nav-link" href="Index.jsp">Home</a>
-            </div>
-        </nav>
-        <main id="main-doc">
-            <section class="main-section" id="welcome">
-                <header>Manejo Proveedores</header>
+	<%!String mensaje = "";
+	long nitproveedor = 0;
+	String ciudad_proveedor = "", direccion_proveedor = "", nombre_proveedor = "", telefono_proveedor = "", estado = "";%>
+	<div>
+		<nav id="navbar">
+			<header>CRAFTY</header>
+			<div>
+				<a class="nav-link" href="AdminMenu.jsp">Admin Menu</a> <a
+					class="nav-link" href="Usuarios.jsp">Usuarios</a> <a
+					class="nav-link" href="Clientes.jsp">Clientes</a> <a
+					class="nav-link" href="Productos.jsp">Productos</a> <a
+					class="nav-link" href="Index.jsp">Home</a>
+			</div>
+		</nav>
+		<main id="main-doc">
+			<section class="main-section" id="welcome">
+				<header>Manejo Proveedores</header>
 
-                <form action="Proveedores" method="POST">
-                    <div><label for="">NIT Proveedor: </label><input type="number" name="nitProveedor" value="<%=codigo%>" required <%=estado%>></div>
-                    <div><input type="hidden" name="cod" value="<%=codigo%>" required></div>
-                    <div><label for="">Ciudad Proveedor: </label><input type="text" name="ciudad" value="<%=titulo%>"></div>
-                    <div><label for="">Direccion Proveedor: </label><input type="text" name="direccion" value="<%=editorial%>"></div>
-                    <div><label for="">Nombre Proveedor: </label><input type="text" name="nombre" value="<%=autor%>"></div>
-                    <div><label for="">Telefono Proveedor: </label><input type="text" name="telefono" value="<%=paginas%>"></div>
-                    <div><input type="submit" name="registrar" value="Registrar"></div>
-                    <div><input type="submit" name="actualizar" value="Actualizar"></div>
-                    <div><input type="submit" name="eliminar" value="Eliminar"></div>
-                </form>
-                <form action="Proveedores" method="post">
-                    <fieldset>
-                        <legend>Consultar</legend>
-                        <div><label>NIT Proveedor:</label><input type="text" name="codigo" required></div>
-                        <div><input type="submit" name="consultar" value="Consultar"></div>
-                    </fieldset>
-                </form>
-            </section>
-        </main>
-    </div>
+				<%
+				//Sirve como una validación del botón Consultar
+				if (request.getParameter("nitproveedor") != null) {
+					nitproveedor = Long.parseLong(request.getParameter("nitproveedor"));
+					nombre_proveedor = request.getParameter("nombre_proveedor");
+					direccion_proveedor = request.getParameter("direccion_proveedor");
+					telefono_proveedor = request.getParameter("telefono_proveedor");
+					ciudad_proveedor = request.getParameter("ciudad_proveedor");
+					estado = "disabled";
+				}
+				%>
+
+				<%
+				//Sirve como una validación del botón crear, actualizar y eliminar
+				if (request.getParameter("men") != null) {
+					nitproveedor = 0;
+					nombre_proveedor = "";
+					direccion_proveedor = "";
+					telefono_proveedor = "";
+					ciudad_proveedor = "";
+					estado = "";
+					mensaje = request.getParameter("men");
+					out.print("<script>alert('" + mensaje + "');</script>");//Mensaje con alert js
+				}
+				%>
+
+				<form action="Proveedor" method="post">
+					<fieldset>
+						<legend>Datos del Empleado</legend>
+						<div>
+							<label>NIT: </label><input type="number" name="nitproveedor"
+								value="<%=nitproveedor%>" required <%=estado%>>
+						</div>
+						<input type="hidden" name="nit_prov"
+							value="<%=nitproveedor%>">
+						<div>
+							<label>Nombre Proveedor: </label><input type="text"
+								name="nombre_proveedor" value="<%=nombre_proveedor%>" required>
+						</div>
+						<div>
+							<label>Direccion: </label><input type="text"
+								name="direccion_proveedor" value="<%=direccion_proveedor%>" required>
+						</div>
+						<div>
+							<label>Telefono: </label><input type="text"
+								name="telefono_proveedor" value="<%=telefono_proveedor%>" required>
+						</div>
+						<div>
+							<label>Ciudad: </label><input type="text" name="ciudad_proveedor"
+								value="<%=ciudad_proveedor%>" required>
+						</div>
+						<div>
+							<input type="submit" name="crear" value="Crear"> <input
+								type="submit" name="actualizar" value="Actualizar"> <input
+								type="submit" name="borrar" value="Borrar">
+						</div>
+					</fieldset>
+				</form>
+
+				<form action="Proveedor" method="post">
+					<fieldset>
+						<legend>Consultar</legend>
+						<div>
+							<label>Cedula: </label><input type="number" name="nit"
+								required>
+						</div>
+						<input type="submit" name="consultar" value="Consultar">
+					</fieldset>
+				</form>
+
+			</section>
+		</main>
+	</div>
 </body>
-</html> -->
+</html>
