@@ -78,20 +78,18 @@ public class Clientes extends HttpServlet {
 		}
 		
 		if(request.getParameter("actualizar")!=null) {
-			String codIsbn,titulo,editorial,autor;
+			String direccion, email, nombre, telefono;
 			int cedula;
-			codIsbn = request.getParameter("cod");
-			titulo = request.getParameter("titulo");
-			editorial = request.getParameter("editorial");
-			autor = request.getParameter("autor");
-			paginas = Integer.parseInt(request.getParameter("paginas"));
-			LibroDTO libDto_Act = new LibroDTO(codIsbn,titulo,editorial,autor,paginas);
-			if(libDao.Actualizar_Libro(libDto_Act)) {
-				JOptionPane.showMessageDialog(null, "Libro se Actualizo Exitosamente.");
-				response.sendRedirect("Libros.jsp?men=Libro Actualizado Exitosamente.");
+			cedula = Integer.parseInt(request.getParameter("cod"));
+			direccion = request.getParameter("direccion");
+			email = request.getParameter("email");
+			nombre = request.getParameter("nombre");
+			telefono = request.getParameter("telefono");
+			ClientesDTO cliDto = new ClientesDTO(cedula, direccion, email, nombre, telefono);
+			if(cliDao.Actualizar_Clientes(cliDto)) {
+				response.sendRedirect("Libros.jsp?men=Cliente Actualizado Exitosamente.");
 			}else {
-				JOptionPane.showMessageDialog(null, "El libro no se Modifico.");
-				response.sendRedirect("Libros.jsp?men=El libro no se Modifico.");
+				response.sendRedirect("Libros.jsp?men=El Cliente no se Actualizo.");
 			}
 			}
 		
