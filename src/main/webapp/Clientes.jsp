@@ -50,7 +50,7 @@ out.print("<script>alert('"+mensaje+"');</script>");//Mensaje con alert js
                 <header>Manejo Clientes</header>
 
                 <form action="Clientes" method="post">
-                    <div><label for="">Cedula Cliente: </label><input type="number" name="cedula" value="<%=codigo%>" required <%=estado%>></div>
+                    <div><label for="">Cedula Cliente: </label><input type="number" name="cedula" value="<%=codigo%>" <%=estado%> required></div>
                     <div><input type="hidden" name="cod" value="<%=codigo%>" required></div>
                     <div><label for="">Direccion Cliente: </label><input type="text" name="direccion" value="<%=direccion%>"></div>
                     <div><label for="">Email Cliente: </label><input type="email" name="email" value="<%=email%>"></div>

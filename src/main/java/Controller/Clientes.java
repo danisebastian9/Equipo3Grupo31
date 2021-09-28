@@ -59,6 +59,11 @@ public class Clientes extends HttpServlet {
 		}
 		
 		
+		if(request.getParameter("eliminar") != null) {
+			int cedula;
+			cedula = Integer.parseInt(request.getParameter("cod"));
+			
+		}
 		
 		
 	}
