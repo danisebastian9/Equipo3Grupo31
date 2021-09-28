@@ -6,6 +6,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.swing.JOptionPane;
 
 import Model.ClientesDAO;
 import Model.ClientesDTO;
@@ -62,8 +63,20 @@ public class Clientes extends HttpServlet {
 		if(request.getParameter("eliminar") != null) {
 			int cedula;
 			cedula = Integer.parseInt(request.getParameter("cod"));
+			int op = JOptionPane.showConfirmDialog(null, "Desea Eliminar el Cliente id: " + cedula);
+			if(op == 0) {
+				if(cliDao.Eliminar_Cliente(cedula)) {
+					response.sendRedirect("Clientes.jsp?men=Cliente Eliminado");
+				} else {
+					response.sendRedirect("Clientes.jsp?men=Cliente no se elimino");
+				}  
+			} else {
+				response.sendRedirect("Clientes.jsp");
+			
+			}
 			
 		}
+		
 		
 		
 	}
