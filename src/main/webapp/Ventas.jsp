@@ -24,15 +24,10 @@
                 <header>Manejo Ventas</header>
 
                 <form action="Ventas" method="post">
-                    <div><label for="">Cedula Cliente: </label><input type="number" name="cedula" value="<%=codigo%>" <%=estado%> required></div>
-                    <div><input type="hidden" name="cod" value="<%=codigo%>" required></div>
-                    <div><label for="">Direccion Cliente: </label><input type="text" name="direccion" value="<%=direccion%>"></div>
-                    <div><label for="">Email Cliente: </label><input type="email" name="email" value="<%=email%>"></div>
-                    <div><label for="">Nombre Cliente: </label><input type="text" name="nombre" value="<%=nombre%>"></div>
-                    <div><label for="">Telefono Cliente: </label><input type="text" name="telefono" value="<%=telefono%>"></div>
-                    <div><input type="submit" name="registrar" value="Registrar"></div>
-                    <div><input type="submit" name="actualizar" value="Actualizar"></div>
-                    <div><input type="submit" name="eliminar" value="Eliminar"></div>
+                    <fieldset>
+                        <legend>Empleado </legend>
+                        <div><label for="">Cedula</label><button>Consultar</button></div>
+                    </fieldset>
                 </form>
                 <form action="Clientes" method="post">
                     <fieldset>
