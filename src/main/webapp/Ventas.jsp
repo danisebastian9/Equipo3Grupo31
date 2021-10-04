@@ -26,11 +26,11 @@
                 <form action="Ventas" method="post">
                     <fieldset>
                         <legend>Empleado</legend>
-                        <div><label for="">Cedula</label><input type="text" name="codigoEmp" id="codigoEmp"><input type="sumbit" name="consultarEmpleado" value="Consultar"><label for="">Empleado</label><input type="text" name="nombreEmpleado"></div>
+                        <div><label for="">Cedula</label><input type="text" name="codigoEmp" id="codigoEmp"><input type="submit" name="consultEmpleado" value="Consultar"><label for="">Empleado</label><input type="text" name="nombreEmpleado"></div>
                     </fieldset>
                     <fieldset>
                         <legend>Cliente</legend>
-                        <div><label for="">Cedula</label><input type="text" name="codigoCli" id="codigoCli"></select><input type="sumbit" name="consultarCliente" value="Consultar"><label for="">Cliente</label><input type="text" name="nombreCliente"></div>
+                        <div><label for="">Cedula</label><input type="text" name="codigoCli" id="codigoCli"><input type="submit" name="consultarCliente" value="Consultar"><label for="">Cliente</label><input type="text" name="nombreCliente"></div>
                     </fieldset>
                     <fieldset>
                         <legend>Venta</legend>
@@ -44,10 +44,12 @@
                                 <div><label for="totalVenta">Total Venta</label><input type="number" name="totalVenta" id="totalVenta"></div>
                                 <div><label for="totalIva">Total Iva</label><input type="number" name="totalIva" id="totalIva"></div>
                                 <div><label for="totalConIva">Total con Iva</label><input type="number" name="totalConIva" id="totalConIva"></div>
-                                <input type="submit" name="Calcular">
+                                <input type="submit" name="Calcular" value="Calcular">
                             </div>
+                            <input type="submit" name="registrarVenta" value="Registrar Venta">
                         </div>
                     </fieldset>
+                </form>
             </section>
         </main>
     </div>
