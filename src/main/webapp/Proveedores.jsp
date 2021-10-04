@@ -14,11 +14,12 @@
 		<nav id="navbar">
 			<header>CRAFTY</header>
 			<div>
-				<a class="nav-link" href="AdminMenu.jsp">Admin Menu</a> <a
-					class="nav-link" href="Usuarios.jsp">Usuarios</a> <a
-					class="nav-link" href="Clientes.jsp">Clientes</a> <a
-					class="nav-link" href="Productos.jsp">Productos</a> <a
-					class="nav-link" href="Index.jsp">Home</a>
+				<a class="nav-link" href="AdminMenu.jsp">Admin Menu</a> 
+				<a class="nav-link" href="Empleados.jsp">Empleados</a> 
+				<a class="nav-link" href="Clientes.jsp">Clientes</a> 
+				<a class="nav-link" href="Productos.jsp">Productos</a> 
+				<a class="nav-link" href="Ventas.jsp">Ventas</a>
+				<a class="nav-link" href="Index.jsp">Home</a>
 			</div>
 		</nav>
 		<main id="main-doc">
@@ -26,7 +27,7 @@
 				<header>Manejo Proveedores</header>
 
 				<%
-				//Sirve como una validación del botón Consultar
+				//Sirve como una validaciï¿½n del botï¿½n Consultar
 				if (request.getParameter("nitproveedor") != null) {
 					nitproveedor = Long.parseLong(request.getParameter("nitproveedor"));
 					nombre_proveedor = request.getParameter("nombre_proveedor");
@@ -38,7 +39,7 @@
 				%>
 
 				<%
-				//Sirve como una validación del botón crear, actualizar y eliminar
+				//Sirve como una validaciï¿½n del botï¿½n crear, actualizar y eliminar
 				if (request.getParameter("men") != null) {
 					nitproveedor = 0;
 					nombre_proveedor = "";

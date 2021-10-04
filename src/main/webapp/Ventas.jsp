@@ -13,7 +13,8 @@
             <header>CRAFTY</header>
             <div>
                 <a class="nav-link" href="AdminMenu.jsp">Admin Menu</a>
-                <a class="nav-link" href="Usuarios.jsp">Usuarios</a>
+                <a class="nav-link" href="Empleados.jsp">Empleados</a>
+                <a class="nav-link" href="Clientes.jsp">Clientes</a> 
                 <a class="nav-link" href="Productos.jsp">Productos</a>
                 <a class="nav-link" href="Proveedores.jsp">Proveedores</a>
                 <a class="nav-link" href="Index.jsp">Home</a>

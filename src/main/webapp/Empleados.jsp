@@ -14,11 +14,12 @@
 		<nav id="navbar">
 			<header>CRAFTY</header>
 			<div>
-				<a class="nav-link" href="AdminMenu.jsp">Admin Menu</a> <a
-					class="nav-link" href="Clientes.jsp">Clientes</a> <a
-					class="nav-link" href="Productos.jsp">Productos</a> <a
-					class="nav-link" href="Proveedores.jsp">Proveedores</a> <a
-					class="nav-link" href="Index.jsp">Home</a>
+				<a class="nav-link" href="AdminMenu.jsp">Admin Menu</a> 
+				<a class="nav-link" href="Clientes.jsp">Clientes</a> 
+				<a class="nav-link" href="Productos.jsp">Productos</a> 
+				<a class="nav-link" href="Proveedores.jsp">Proveedores</a>
+				<a class="nav-link" href="Ventas.jsp">Ventas</a>
+				<a class="nav-link" href="Index.jsp">Home</a>
 			</div>
 		</nav>
 		<main id="main-doc">
@@ -26,7 +27,7 @@
 				<header>Manejo Empleados</header>
 
 				<%
-				//Trae los datos de la consulta y hace una validación
+				//Trae los datos de la consulta y hace una validaciï¿½n
 				if (request.getParameter("cedula_empleado") != null) {
 					cedula_empleado = Long.parseLong(request.getParameter("cedula_empleado"));
 					nombre_empleado = request.getParameter("nombre_empleado");
@@ -38,7 +39,7 @@
 				%>
 
 				<%
-				//Sirve como una validación de la actualización y del botón crear
+				//Sirve como una validaciï¿½n de la actualizaciï¿½n y del botï¿½n crear
 				if (request.getParameter("men") != null) {
 					cedula_empleado = 0;
 					nombre_empleado = "";
