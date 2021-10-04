@@ -25,17 +25,13 @@
 
                 <form action="Ventas" method="post">
                     <fieldset>
-                        <legend>Empleado </legend>
-                        <div><label for="">Cedula</label><button>Consultar</button></div>
+                        <legend>Empleado</legend>
+                        <div><label for="">Cedula</label><select class="listaEmpleados" name="codigoEmp"></select><input type="sumbit" name="consultarEmpleado" value="Consultar"><label for="">Empleado</label><input type="text" name="nombreEmpleado"><label for="">Consec</label><input type="text" name="Consec"></div>
                     </fieldset>
-                </form>
-                <form action="Clientes" method="post">
                     <fieldset>
-                        <legend>Consultar</legend>
-                        <div><label>Cedula Cliente:</label><input type="number" name="codigo" required></div>
-                        <div><input type="submit" name="consultar" value="Consultar"></div>
+                        <legend>Cliente</legend>
+                        <div><label for="">Cedula</label><select class="listaClientes" name="codigoCli"></select><input type="sumbit" name="consultarCliente" value="Consultar"><label for="">Cliente</label><input type="text" name="nombreCliente"></div>
                     </fieldset>
-                </form>
             </section>
         </main>
     </div>
