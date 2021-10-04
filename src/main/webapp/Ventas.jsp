@@ -36,11 +36,15 @@
                         <legend>Venta</legend>
                         <label for="">Consec</label><input type="text" name="Consec">
                         <div class="lineaProd">
-                            <div><label for="codProd">Codigo Producto</label><input type="text" name="codProd" id="codProd"><input type="submit" name="consultarCodProd" value="Consultar"></div>
+                            <div><label for="codProd">Codigo Producto</label><label for="nomProd">Nombre Producto</label><label for="preProd">Precio Producto</label><label for="cantProd">Cantidad</label><label for="totalProd">Valor Total</label></div>
+                            <div><input type="text" name="codProd" id="codProd"><input type="submit" name="consultarCodProd" value="Consultar"><input type="text" name="nomProd" id="nomProd"><input type="number" name="preProd" id="preProd"><input type="number" name="cantProd" id="cantProd"><input type="number" name="totalProd" id="totalProd"></div>
+                            <div><input type="text" name="codProd" id="codProd"><input type="submit" name="consultarCodProd" value="Consultar"><input type="text" name="nomProd" id="nomProd"><input type="number" name="preProd" id="preProd"><input type="number" name="cantProd" id="cantProd"><input type="number" name="totalProd" id="totalProd"></div>
+                            <div><input type="text" name="codProd" id="codProd"><input type="submit" name="consultarCodProd" value="Consultar"><input type="text" name="nomProd" id="nomProd"><input type="number" name="preProd" id="preProd"><input type="number" name="cantProd" id="cantProd"><input type="number" name="totalProd" id="totalProd"></div>
+                            <!-- <div><label for="codProd">Codigo Producto</label><input type="text" name="codProd" id="codProd"><input type="submit" name="consultarCodProd" value="Consultar"></div>
                             <div><label for="nomProd">Nombre Producto</label><input type="text" name="nomProd" id="nomProd"></div>
                             <div><label for="preProd">Precio Producto</label><input type="number" name="preProd" id="preProd"></div>
                             <div><label for="cantProd">Cantidad</label><input type="number" name="cantProd" id="cantProd"></div>
-                            <div><label for="totalProd">Valor Total</label><input type="number" name="totalProd" id="totalProd"></div>
+                            <div><label for="totalProd">Valor Total</label><input type="number" name="totalProd" id="totalProd"></div> -->
                         </div>
                     </fieldset>
             </section>
