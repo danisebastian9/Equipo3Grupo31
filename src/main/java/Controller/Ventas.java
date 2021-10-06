@@ -12,6 +12,9 @@ import Model.ClientesDTO;
 import Model.EmpleadoDAO;
 import Model.EmpleadoDTO;
 import Model.VentasDAO;
+import Model.ProductosDAO;
+import Model.ProductosDTO;
+
 
 /**
  * Servlet implementation class Ventas
@@ -60,6 +63,83 @@ public class Ventas extends HttpServlet {
 				response.sendRedirect("Ventas.jsp?men= El cliente o el empleado no Existen");
 			}
 
+		}
+		
+		ProductosDAO prodDao = new ProductosDAO();
+
+		try {
+
+			if (request.getParameter("consulta2") != null) {
+
+				int codigo_producto = 0;
+				double ivacompra, precio_venta;
+				String nombre_producto;
+
+				codigo_producto = Integer.parseInt(request.getParameter("codProd1"));
+				ProductosDTO prod = prodDao.Buscar_Producto(codigo_producto);
+				if (prod != null) {
+					codigo_producto = prod.getCodigo_producto();
+					ivacompra = prod.getIvacompra();
+					nombre_producto = prod.getNombre_producto();
+					precio_venta = prod.getPrecio_venta();
+					response.sendRedirect("Ventas.jsp?codProd1=" + codigo_producto + "&&ivacompra=" + ivacompra
+							+ "&&nombre_producto=" + nombre_producto + "&&precio_venta=" + precio_venta);
+				} else {
+					response.sendRedirect("Ventas.jsp?men= El producto no existe");
+				}
+			}
+		} catch (Exception e) {
+			response.sendRedirect("Ventas.jsp?error=true");
+		}
+
+		try {
+
+			if (request.getParameter("consulta3") != null) {
+
+				int codigo_producto = 0;
+				double ivacompra, precio_venta;
+				String nombre_producto;
+
+				codigo_producto = Integer.parseInt(request.getParameter("codProd2"));
+				ProductosDTO prod = prodDao.Buscar_Producto(codigo_producto);
+				if (prod != null) {
+					codigo_producto = prod.getCodigo_producto();
+					ivacompra = prod.getIvacompra();
+					nombre_producto = prod.getNombre_producto();
+					precio_venta = prod.getPrecio_venta();
+					response.sendRedirect("Ventas.jsp?codProd2=" + codigo_producto + "&&ivacompra2=" + ivacompra
+							+ "&&nombre_producto2=" + nombre_producto + "&&precio_venta2=" + precio_venta);
+				} else {
+					response.sendRedirect("Ventas.jsp?men= El producto no existe");
+				}
+			}
+		} catch (Exception e) {
+			response.sendRedirect("Ventas.jsp?error=true");
+		}
+
+		try {
+
+			if (request.getParameter("consulta4") != null) {
+
+				int codigo_producto = 0;
+				double ivacompra, precio_venta;
+				String nombre_producto;
+
+				codigo_producto = Integer.parseInt(request.getParameter("codProd3"));
+				ProductosDTO prod = prodDao.Buscar_Producto(codigo_producto);
+				if (prod != null) {
+					codigo_producto = prod.getCodigo_producto();
+					ivacompra = prod.getIvacompra();
+					nombre_producto = prod.getNombre_producto();
+					precio_venta = prod.getPrecio_venta();
+					response.sendRedirect("Ventas.jsp?codProd3=" + codigo_producto + "&&ivacompra3=" + ivacompra
+							+ "&&nombre_producto3=" + nombre_producto + "&&precio_venta3=" + precio_venta);
+				} else {
+					response.sendRedirect("Ventas.jsp?men= El producto no existe");
+				}
+			}
+		} catch (Exception e) {
+			response.sendRedirect("Ventas.jsp?error=true");
 		}
 		
 	}
