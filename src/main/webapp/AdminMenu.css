@@ -181,7 +181,7 @@ fieldset {
 
 #botonesClientes {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 #botonesClientes input {
