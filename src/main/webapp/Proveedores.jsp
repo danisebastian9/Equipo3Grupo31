@@ -56,7 +56,7 @@
 					<fieldset>
 						<legend>Datos del Empleado</legend>
 						<div>
-							<label>NIT: </label><input type="number" name="nitproveedor"
+							<label>NIT: </label><input class="inputs" type="number" name="nitproveedor"
 								value="<%=nitproveedor%>" required <%=estado%>>
 						</div>
 						<input type="hidden" name="nit_prov"
