@@ -90,18 +90,18 @@ String estado1 = "", estado2 = "", estado3 = "";
                         <legend>Empleado</legend>
                         <div>
                         	<label for="">Cedula</label>
-                        	<input type="number" name="ced_empleado" value="<%=cedula_empleado%>" required>
+                        	<input class="inputs" type="number" name="ced_empleado" value="<%=cedula_empleado%>" required>
                         	<label for=""> Empleado</label>
-                        	<input type="text" name="nom_empleado" value="<%=nom_empleado%>" <%=estado%>>
+                        	<input class="inputs" type="text" name="nom_empleado" value="<%=nom_empleado%>" <%=estado%>>
                         </div>
                     </fieldset>
                     <fieldset>
                         <legend>Cliente</legend>
                         <div>
                         	<label for="">Cedula</label>
-                        	<input type="number" name="ced_cliente" value="<%=cedula_cliente%>" required>
+                        	<input class="inputs" type="number" name="ced_cliente" value="<%=cedula_cliente%>" required>
                         	<label for=""> Cliente</label>
-                        	<input type="text" name="nom_cliente" value="<%=nom_cliente%>" <%=estado%>>
+                        	<input class="inputs" type="text" name="nom_cliente" value="<%=nom_cliente%>" <%=estado%>>
                         </div>
                     </fieldset>
                     <div>
@@ -110,52 +110,52 @@ String estado1 = "", estado2 = "", estado3 = "";
                     <fieldset>
                         <legend>Venta</legend>
                         <label for="">Consecutivo</label>
-                        <input type="number" name="consecutivo" value="<%=consecutivo%>" <%=estado%>>
+                        <input class="inputs" type="number" name="consecutivo" value="<%=consecutivo%>" <%=estado%>>
                         <input type="hidden" name="consec" value="<%=consecutivo%>">
                         <div class="lineaProd">
-                            <div>
-                            	<label for="codProd">Codigo Producto</label>
-                            	<label for="nomProd">Nombre Producto</label>
-                            	<label for="preProd">Precio Producto</label>
-                            	<label for="cantProd">Cantidad</label>
-                            	<label for="totalProd">Valor Total</label>
+                            <div id="ventasLabels">
+                            	<!-- <label for="codProd">Codigo Producto</label> -->
+                            	<!-- <label for="nomProd">Nombre Producto</label> -->
+                            	<!-- <label for="preProd">Precio Producto</label> -->
+                            	<!-- <label for="cantProd">Cantidad</label> -->
+                            	<!-- <label for="totalProd">Valor Total</label> -->
                             </div>
                             <div>
-                            	<input type="text" name="codProd1" id="codProd1" value="<%=codProd1%>"  required >
+                            	<input class="inputs" type="number" placeholder="Codigo Producto" name="codProd1" id="codProd1" value="<%=codProd1%>"  required >
                             	<input type="submit" name="consulta2" value="Consultar">
-                            	<input type="text" name="nomProd1" id="nomProd1" value="<%=nombre_producto%>">
-                            	<input type="number" name="preProd1" id="preProd1" value="<%=precio_venta%>">
-                            	<input type="number" name="cantProd1" id="cantProd1" value="<%=cantProd1%>" onchange="calcular1()">
-                            	<input type="number" name="totalProd1" id="totalProd1">
+                            	<input class="inputs" type="text" placeholder="Nombre Producto" name="nomProd1" id="nomProd1" value="<%=nombre_producto%>">
+                            	<input class="inputs" type="number" placeholder="Precio Producto" name="preProd1" id="preProd1" value="<%=precio_venta%>">
+                            	<input class="inputs" type="number" placeholder="Cantidad" name="cantProd1" id="cantProd1" value="<%=cantProd1%>" onchange="calcular1()">
+                            	<input class="inputs" type="number" placeholder="Valor Total" name="totalProd1" id="totalProd1">
                             </div>
                             <div>
-                            	<input type="text" name="codProd2" id="codProd2" value="<%=codProd2%>">
+                            	<input class="inputs" type="text" name="codProd2" id="codProd2" value="<%=codProd2%>">
                             	<input type="submit" name="consulta3" value="Consultar">
-                            	<input type="text" name="nomProd2" id="nomProd2" value="<%=nombre_producto2%>">
-                            	<input type="number" name="preProd2" id="preProd2" value="<%=precio_venta2%>">
-                            	<input type="number" name="cantProd2" id="cantProd2" value="<%=cantProd2%>" onchange="calcular2()">
-                            	<input type="number" name="totalProd2" id="totalProd2" >
+                            	<input class="inputs" type="text" name="nomProd2" id="nomProd2" value="<%=nombre_producto2%>">
+                            	<input class="inputs" type="number" name="preProd2" id="preProd2" value="<%=precio_venta2%>">
+                            	<input class="inputs" type="number" name="cantProd2" id="cantProd2" value="<%=cantProd2%>" onchange="calcular2()">
+                            	<input class="inputs" type="number" name="totalProd2" id="totalProd2" >
                             </div>
                             <div>
-                            	<input type="text" name="codProd3" id="codProd3" value="<%=codProd3%>">
+                            	<input class="inputs" type="text" name="codProd3" id="codProd3" value="<%=codProd3%>">
                             	<input type="submit" name="consulta4" value="Consultar">
-                            	<input type="text" name="nomProd3" id="nomProd3" value="<%=nombre_producto3%>">
-                            	<input type="number" name="preProd3" id="preProd3" value="<%=precio_venta3%>">
-                            	<input type="number" name="cantProd3" id="cantProd3" value="<%=cantProd3%>" onchange="calcular3()">
-                            	<input type="number" name="totalProd3" id="totalProd3">
+                            	<input class="inputs" type="text" name="nomProd3" id="nomProd3" value="<%=nombre_producto3%>">
+                            	<input class="inputs" type="number" name="preProd3" id="preProd3" value="<%=precio_venta3%>">
+                            	<input class="inputs" type="number" name="cantProd3" id="cantProd3" value="<%=cantProd3%>" onchange="calcular3()">
+                            	<input class="inputs" type="number" name="totalProd3" id="totalProd3">
                             </div>
                             <div>
                                 <div>
                                 	<label for="totalVenta">Total Venta</label>
-                                	<input type="number" name="totalVenta" id="totalVenta">
+                                	<input class="inputs" type="number" name="totalVenta" id="totalVenta">
                                 </div>
                                 <div>
                                 	<label for="totalIva">Total Iva</label>
-                                	<input type="number" name="totalIva" id="totalIva">
+                                	<input class="inputs" type="number" name="totalIva" id="totalIva">
                                 </div>
                                 <div>
                                 	<label for="totalConIva">Total con Iva</label>
-                                	<input type="number" name="totalConIva" id="totalConIva">
+                                	<input class="inputs" type="number" name="totalConIva" id="totalConIva">
                                 </div>
                                 <input type="submit" name="Calcular" value="Calcular">
                             </div>
