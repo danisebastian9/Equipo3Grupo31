@@ -144,10 +144,21 @@ fieldset {
     border-radius: 4px;
     border: none;
     box-shadow: 1px 2px 3px grey;
+    margin-top: 5px;
     padding: 5px;
-    margin: 5px;
 }
 
 .botones {
-    
+    border: none;
+    background: #f2994ac9;
+    color: white;
+    border-radius: 3px;
+    padding: 8px;
+    margin-top: 5px;
+    box-shadow: 2px 2px 3px grey;
+}
+
+.botones:hover {
+    cursor: pointer;
+    box-shadow: 2px 2px 1px grey;
 }
