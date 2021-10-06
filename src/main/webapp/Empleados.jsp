@@ -56,32 +56,32 @@
 					<fieldset>
 						<legend>Datos del Empleado</legend>
 						<div>
-							<label>Cedula: </label><input type="number"
+							<label>Cedula: </label><input type="number" class="inputs"
 								name="cedula_empleado" value="<%=cedula_empleado%>" required
 								<%=estado%>>
 						</div>
 						<input type="hidden" name="ced_empleado"
 							value="<%=cedula_empleado%>">
 						<div>
-							<label>Nombre Completo: </label><input type="text"
+							<label>Nombre Completo: </label><input type="text" class="inputs"
 								name="nombre_empleado" value="<%=nombre_empleado%>" required>
 						</div>
 						<div>
-							<label>Correo Electronico: </label><input type="text"
+							<label>Correo Electronico: </label><input type="text" class="inputs"
 								name="email_empleado" value="<%=email_empleado%>" required>
 						</div>
 						<div>
-							<label>Usuario: </label><input type="text" name="empleado"
+							<label>Usuario: </label><input type="text" name="empleado" class="inputs"
 								value="<%=empleado%>" required>
 						</div>
 						<div>
-							<label>Contrasena: </label><input type="password"
+							<label>Contrasena: </label><input type="password" class="inputs"
 								name="contrasena" value="<%=contrasena%>" required>
 						</div>
 						<div>
-							<input type="submit" name="crear" value="Crear"> <input
-								type="submit" name="actualizar" value="Actualizar"> <input
-								type="submit" name="borrar" value="Borrar">
+							<input class="botones" type="submit" name="crear" value="Crear"> <input
+							class="botones" type="submit" name="actualizar" value="Actualizar"> <input
+							class="botones" type="submit" name="borrar" value="Borrar">
 						</div>
 					</fieldset>
 				</form>
@@ -90,10 +90,10 @@
 					<fieldset>
 						<legend>Consultar</legend>
 						<div>
-							<label>Cedula: </label><input type="number" name="cedula"
+							<label>Cedula: </label><input type="number" name="cedula" class="inputs"
 								required>
 						</div>
-						<input type="submit" name="consultar" value="Consultar">
+						<input class="botones" type="submit" name="consultar" value="Consultar">
 					</fieldset>
 				</form>
 			</section>

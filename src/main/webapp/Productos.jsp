@@ -63,11 +63,11 @@
                     <form action="Productos" method="post" enctype="multipart/form-data">
                         <div>
                             <label>Archivo:</label>
-                            <input type="text" name="nombre">
-                            <input type="file" value="Examinar" name="archivo">
+                            <input class="inputs" type="text" name="nombre">
+                            <input class="botones" type="file" value="Examinar" name="archivo">
                         </div>
                         <div>
-                            <input type="submit" name="cargar" value="Cargar archivo">
+                            <input class="botones" type="submit" name="cargar" value="Cargar archivo">
                         </div>
                     </form>
                     
@@ -75,34 +75,26 @@
 					<fieldset>
 						<legend>Datos del Producto</legend>
 						<div>
-							<label>Codigo producto: </label><input type="number" name="codigo_producto"
-								value="<%=codigo_producto%>" required <%=estado%>>
+							<label>Codigo producto: </label><input class="inputs" type="number" name="codigo_producto" value="<%=codigo_producto%>" required <%=estado%>>
 						</div>
-						<input type="hidden" name="cod_prod"
-							value="<%=codigo_producto%>">
+						    <input type="hidden" name="cod_prod" value="<%=codigo_producto%>">
 						<div>
-							<label>Iva compra: </label><input type="number"
-								name="ivacompra" value="<%=ivacompra%>" required>
+							<label>Iva compra: </label><input class="inputs" type="number" name="ivacompra" value="<%=ivacompra%>" required>
 						</div>
 						<div>
-							<label>Nit proveedor: </label><input type="number"
-								name="nitproveedor_key" value="<%=nitproveedor_key%>" required>
+							<label>Nit proveedor: </label><input class="inputs" type="number" name="nitproveedor_key" value="<%=nitproveedor_key%>" required>
 						</div>
 						<div>
-							<label>Nombre producto: </label><input type="text"
-								name="nombre_producto" value="<%=nombre_producto%>" required>
+							<label>Nombre producto: </label><input class="inputs" type="text" name="nombre_producto" value="<%=nombre_producto%>" required>
 						</div>
 						<div>
-							<label>Precio compra: </label><input type="number" name="precio_compra"
-								value="<%=precio_compra%>" required>
+							<label>Precio compra: </label><input class="inputs" type="number" name="precio_compra" value="<%=precio_compra%>" required>
 						</div>
 						<div>
-							<label>Precio venta: </label><input type="number" name="precio_venta"
-								value="<%=precio_venta%>" required>
+							<label>Precio venta: </label><input class="inputs" type="number" name="precio_venta" value="<%=precio_venta%>" required>
 						</div>
 						<div>
-								<input
-								type="submit" name="actualizar" value="Actualizar">
+							<input class="botones" type="submit" name="actualizar" value="Actualizar">
 						</div>
 					</fieldset>
 				</form>
@@ -111,10 +103,10 @@
 					<fieldset>
 						<legend>Consultar</legend>
 						<div>
-							<label>Codigo producto: </label><input type="number" name="producto"
+							<label>Codigo producto: </label><input class="inputs" type="number" name="producto"
 								required>
 						</div>
-						<input type="submit" name="consultar" value="Consultar">
+						<input class="botones" type="submit" name="consultar" value="Consultar">
 					</fieldset>
 				</form>
                 </section>

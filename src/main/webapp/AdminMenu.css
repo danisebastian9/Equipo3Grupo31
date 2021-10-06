@@ -136,7 +136,6 @@ body {
 fieldset {
     border-radius: 10px;
     border: grey solid 2px;
-    box-shadow: 1px 1px 3px #f2994ac9;
     margin: 5px;
 }
 
@@ -144,7 +143,7 @@ fieldset {
     border-radius: 4px;
     border: none;
     box-shadow: 1px 2px 3px grey;
-    margin-top: 5px;
+    margin-top: 10px;
     padding: 5px;
 }
 
@@ -154,11 +153,37 @@ fieldset {
     color: white;
     border-radius: 3px;
     padding: 8px;
-    margin-top: 5px;
+    margin-top: 10px;
     box-shadow: 2px 2px 3px grey;
+    outline: none;
 }
 
 .botones:hover {
     cursor: pointer;
     box-shadow: 2px 2px 1px grey;
+}
+
+.totales {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.totales label {
+    margin: 5px;
+}
+
+#registrar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#botonesClientes {
+    display: flex;
+    justify-content: center;
+}
+
+#botonesClientes input {
+    margin: 15px;
 }

@@ -51,21 +51,24 @@ out.print("<script>alert('"+mensaje+"');</script>");//Mensaje con alert js
                 <header>Manejo Clientes</header>
 
                 <form action="Clientes" method="post">
-                    <div><label for="">Cedula Cliente: </label><input type="number" name="cedula" value="<%=codigo%>" <%=estado%> required></div>
+                    <div><label for="">Cedula Cliente: </label><input class="inputs" type="number" name="cedula" value="<%=codigo%>" <%=estado%> required></div>
                     <div><input type="hidden" name="cod" value="<%=codigo%>" required></div>
-                    <div><label for="">Direccion Cliente: </label><input type="text" name="direccion" value="<%=direccion%>"></div>
-                    <div><label for="">Email Cliente: </label><input type="email" name="email" value="<%=email%>"></div>
-                    <div><label for="">Nombre Cliente: </label><input type="text" name="nombre" value="<%=nombre%>"></div>
-                    <div><label for="">Telefono Cliente: </label><input type="text" name="telefono" value="<%=telefono%>"></div>
-                    <div><input type="submit" name="registrar" value="Registrar"></div>
-                    <div><input type="submit" name="actualizar" value="Actualizar"></div>
-                    <div><input type="submit" name="eliminar" value="Eliminar"></div>
+                    <div><label for="">Direccion Cliente: </label><input class="inputs" type="text" name="direccion" value="<%=direccion%>"></div>
+                    <div><label for="">Email Cliente: </label><input class="inputs" type="email" name="email" value="<%=email%>"></div>
+                    <div><label for="">Nombre Cliente: </label><input class="inputs" type="text" name="nombre" value="<%=nombre%>"></div>
+                    <div><label for="">Telefono Cliente: </label><input class="inputs" type="text" name="telefono" value="<%=telefono%>"></div>
+                    <div id="botonesClientes">
+                        <div><input class="botones" type="submit" name="registrar" value="Registrar"></div>
+                        <div><input class="botones" type="submit" name="actualizar" value="Actualizar"></div>
+                        <div><input class="botones" type="submit" name="eliminar" value="Eliminar"></div>
+                    </div>
+
                 </form>
                 <form action="Clientes" method="post">
                     <fieldset>
                         <legend>Consultar</legend>
-                        <div><label>Cedula Cliente:</label><input type="number" name="codigo" required></div>
-                        <div><input type="submit" name="consultar" value="Consultar"></div>
+                        <div><label>Cedula Cliente:</label><input class="inputs" type="number" name="codigo" required></div>
+                        <div><input class="botones" type="submit" name="consultar" value="Consultar"></div>
                     </fieldset>
                 </form>
             </section>

@@ -62,24 +62,24 @@
 						<input type="hidden" name="nit_prov"
 							value="<%=nitproveedor%>">
 						<div>
-							<label>Nombre Proveedor: </label><input type="text"
+							<label>Nombre Proveedor: </label><input class="inputs" type="text"
 								name="nombre_proveedor" value="<%=nombre_proveedor%>" required>
 						</div>
 						<div>
-							<label>Direccion: </label><input type="text"
+							<label>Direccion: </label><input class="inputs" type="text"
 								name="direccion_proveedor" value="<%=direccion_proveedor%>" required>
 						</div>
 						<div>
-							<label>Telefono: </label><input type="text"
+							<label>Telefono: </label><input class="inputs" type="text"
 								name="telefono_proveedor" value="<%=telefono_proveedor%>" required>
 						</div>
 						<div>
-							<label>Ciudad: </label><input type="text" name="ciudad_proveedor"
+							<label>Ciudad: </label><input class="inputs" type="text" name="ciudad_proveedor"
 								value="<%=ciudad_proveedor%>" required>
 						</div>
 						<div>
-							<input type="submit" name="crear" value="Crear"> <input
-								type="submit" name="actualizar" value="Actualizar"> <input
+							<input class="botones" type="submit" name="crear" value="Crear"> <input class="botones"
+								type="submit" name="actualizar" value="Actualizar"> <input class="botones"
 								type="submit" name="borrar" value="Borrar">
 						</div>
 					</fieldset>
@@ -89,10 +89,10 @@
 					<fieldset>
 						<legend>Consultar</legend>
 						<div>
-							<label>Cedula: </label><input type="number" name="nit"
+							<label>Cedula: </label><input class="inputs" type="number" name="nit"
 								required>
 						</div>
-						<input type="submit" name="consultar" value="Consultar">
+						<input class="botones" type="submit" name="consultar" value="Consultar">
 					</fieldset>
 				</form>
 
