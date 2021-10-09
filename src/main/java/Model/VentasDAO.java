@@ -49,4 +49,27 @@ public class VentasDAO {
 		
 	}
 	
+	public long Actualizar_Venta(long codigo_venta, double ivaventa, double total_venta, double valor_total) {
+		boolean resul = false;
+		String sql = "update ventas set ivaventa = ?, valor_venta = ?, total_venta = ? where codigo_venta = ?";
+		try {
+		ps = con.prepareStatement(sql);
+		ps.setDouble(1, ivaventa);
+		ps.setDouble(2, total_venta);
+		ps.setDouble(3, valor_total);
+		ps.setLong(4, codigo_venta);
+		
+		resul = ps.executeUpdate()>0;
+		
+		if(!resul) {
+			JOptionPane.showMessageDialog(null, "No se encontro venta");
+		}
+		
+		} catch (SQLException e) {
+			JOptionPane.showMessageDialog(null, "error al actualizar la venta: " + e);
+		}
+		
+		return codigo_venta;
+	}
+	
 }

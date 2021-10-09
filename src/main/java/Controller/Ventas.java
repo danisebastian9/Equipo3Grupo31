@@ -1,6 +1,7 @@
 package Controller;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -9,12 +10,12 @@ import javax.servlet.http.HttpServletResponse;
 
 import Model.ClientesDAO;
 import Model.ClientesDTO;
+import Model.DetalleVentaDAO;
 import Model.EmpleadoDAO;
 import Model.EmpleadoDTO;
-import Model.VentasDAO;
 import Model.ProductosDAO;
 import Model.ProductosDTO;
-
+import Model.VentasDAO;
 
 /**
  * Servlet implementation class Ventas
@@ -22,20 +23,22 @@ import Model.ProductosDTO;
 @WebServlet("/Ventas")
 public class Ventas extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public Ventas() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
 
 	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#HttpServlet()
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+	public Ventas() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
 		if (request.getParameter("consultar1") != null) {
 
 			long cedula_empleado;
@@ -43,11 +46,11 @@ public class Ventas extends HttpServlet {
 			long codigo_venta;
 			String nombre_empleado;
 			String nombre_cliente;
-			
+
 			EmpleadoDAO empDao = new EmpleadoDAO();
 			ClientesDAO cliDao = new ClientesDAO();
 			VentasDAO venDao = new VentasDAO();
-			
+
 			cedula_empleado = Long.parseLong(request.getParameter("ced_empleado"));
 			EmpleadoDTO emp = empDao.Buscar_Empleado(cedula_empleado);
 			cedula_cliente = Integer.parseInt(request.getParameter("ced_cliente"));
@@ -56,15 +59,15 @@ public class Ventas extends HttpServlet {
 				codigo_venta = venDao.Iniciar_venta(cedula_cliente, cedula_empleado);
 				nombre_empleado = emp.getNombre_empleado();
 				nombre_cliente = cliDto.getNombre();
-				response.sendRedirect("Ventas.jsp?codigo_venta=" + codigo_venta + "&&nombre_empleado="
-						+ nombre_empleado + "&&nombre_cliente=" + nombre_cliente + "&&cedula_empleado=" 
-						+ cedula_empleado + "&&cedula_cliente=" + cedula_cliente);
+				response.sendRedirect("Ventas.jsp?codigo_venta=" + codigo_venta + "&&nombre_empleado=" + nombre_empleado
+						+ "&&nombre_cliente=" + nombre_cliente + "&&cedula_empleado=" + cedula_empleado
+						+ "&&cedula_cliente=" + cedula_cliente);
 			} else {
 				response.sendRedirect("Ventas.jsp?men= El cliente o el empleado no Existen");
 			}
 
 		}
-		
+
 		ProductosDAO prodDao = new ProductosDAO();
 
 		try {
@@ -141,7 +144,55 @@ public class Ventas extends HttpServlet {
 		} catch (Exception e) {
 			response.sendRedirect("Ventas.jsp?error=true");
 		}
-		
+
+		try {
+			if (request.getParameter("registrarVenta") != null) {
+
+				if (!request.getParameter("codigoVenta").isEmpty()) {
+
+					VentasDAO venDao = new VentasDAO();
+					DetalleVentaDAO detalleVentaDAO = new DetalleVentaDAO();
+
+					if (!request.getParameter("codProd1").isEmpty()) {
+						detalleVentaDAO.Detalle_venta(Integer.parseInt(request.getParameter("cantProd1")),
+								Long.valueOf(request.getParameter("codProd1")),
+								Long.valueOf(request.getParameter("codigoVenta")),
+								Double.parseDouble(request.getParameter("totalProd1")),
+								Double.parseDouble(request.getParameter("valorventa1")),
+								Double.parseDouble(request.getParameter("valoriva1")));
+					}
+
+					if (!request.getParameter("codProd2").isEmpty()) {
+						detalleVentaDAO.Detalle_venta(Integer.parseInt(request.getParameter("cantProd2")),
+								Long.valueOf(request.getParameter("codProd2")),
+								Long.valueOf(request.getParameter("codigoVenta")),
+								Double.parseDouble(request.getParameter("totalProd2")),
+								Double.parseDouble(request.getParameter("valorventa2")),
+								Double.parseDouble(request.getParameter("valoriva2")));
+					}
+
+					if (!request.getParameter("codProd3").isEmpty()) {
+						detalleVentaDAO.Detalle_venta(Integer.parseInt(request.getParameter("cantProd3")),
+								Long.valueOf(request.getParameter("codProd3")),
+								Long.valueOf(request.getParameter("codigoVenta")),
+								Double.parseDouble(request.getParameter("totalProd3")),
+								Double.parseDouble(request.getParameter("valorventa3")),
+								Double.parseDouble(request.getParameter("valoriva3")));
+					}
+
+					venDao.Actualizar_Venta(Long.valueOf(request.getParameter("codigoVenta")),
+							Double.parseDouble(request.getParameter("totalIva")),
+							Double.parseDouble(request.getParameter("totalVenta")),
+							Double.parseDouble(request.getParameter("totalConIva")));
+					response.sendRedirect("Ventas.jsp");
+
+				}
+
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+
 	}
 
 }
