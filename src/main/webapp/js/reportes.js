@@ -9,7 +9,7 @@ $(document).ready(function(){
                 console.log(result)
                 var tabla = document.querySelector("#tabla")
                 tabla.innerHTML = ''
-                ReadableStream.innerHTML += `<tr>
+                tabla.innerHTML += `<tr>
                 <th>Cedula</th>
                 <th>Nombre</th>
                 <th>Email</th>
@@ -32,3 +32,4 @@ $(document).ready(function(){
         listarUsuarios();
     })
 })
+
